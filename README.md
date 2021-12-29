@@ -1,5 +1,5 @@
 # Summary
-ERC721Delegator is an interface extended from ERC721. With ERC721Delegator, ERC721 can be loaned and borrowed while the lender only has the right to use, but cannot transfer the assets.
+ERC4610 is an extension of ERC721. With ERC4610, ERC721 can be loaned and borrowed while the lender only has the right to use, but cannot transfer the assets.
 
 
 
@@ -35,18 +35,26 @@ function setDelegator(address _delegator, uint256 _tokenId) external returns (bo
 
 
 
+### safeTransferFrom
+
+Safely transfers `tokenId` token from `from` to `to` and `delegator` won't be cleared if `reserved` is true.
+
+``` js
+function safeTransferFrom(address from, address to, uint256 tokenId, bool reserved) external;
+```
+
+
+
 # Implementation
 
-see contracts/ERC721Delegator.sol
+see contracts/ERC4610.sol
 
 
 
 # Notice
 
-The developers of ERC721Delegator interface should strictly distinguish between `owner` and `delegator` from `msg.sender`. The delegator is always an attribute (like a tag) for identification, and does not hold or handle any related assets.
+The developers of ERC4610 interface should strictly distinguish between `owner` and `delegator` from `msg.sender`. The delegator is always an attribute (like a tag) for identification, and does not hold or handle any related assets.
 
 That means, use `require(_onlyOwnerOrDelegator(tokenId))` instead of `require(_onlyOwner(tokenId))` for identity verification of `msg.sender` . When it comes to the transfer of assets, the `sender` should be the `owner` (not delegator) or other (depending on your game logic), and when the assets are to be transferred out, the `recipient` should be the `owner` or other.
 
 Warn: If there is an NFT burning function in the game logic, please make sure the caller is the owner, otherwise it may cause losses to the owner.
-
-In the showcase, you can see how to handle the state changes of the game character, the asset transfer of ERC20, ERC721 when msg.sender is a delegator.
