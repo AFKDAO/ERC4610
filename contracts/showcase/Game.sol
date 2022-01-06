@@ -14,7 +14,7 @@ contract Game is IERC721Receiver {
         uint256 level;
     }
 
-    // ERC721 token address
+    // ERC4610 token address
     address private _digimon;
     // ERC20 token address
     address private _gold;
