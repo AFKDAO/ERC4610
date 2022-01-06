@@ -2,19 +2,18 @@
 
 pragma solidity ^0.8.0;
 
-import "./ERC721/IERC721.sol";
-import "./ERC721/IERC721Receiver.sol";
-import "./IERC4610.sol";
-import "./ERC721/extensions/IERC721Metadata.sol";
+import "./inheritance/ERC165.sol";
+import "./interfaces/IERC721Receiver.sol";
+import "./interfaces/IERC4610.sol";
+import "./interfaces/IERC721Metadata.sol";
 import "./utils/Address.sol";
 import "./utils/Context.sol";
 import "./utils/Strings.sol";
-import "./utils/introspection/ERC165.sol";
 
 /**
  * @dev ERC4610 is an extension of ERC721
  */
-contract ERC4610 is Context, ERC165, IERC4610, IERC721, IERC721Metadata {
+contract ERC4610 is Context, ERC165, IERC4610, IERC721Metadata {
     using Address for address;
     using Strings for uint256;
 
@@ -265,7 +264,6 @@ contract ERC4610 is Context, ERC165, IERC4610, IERC721, IERC721Metadata {
         return _owners[tokenId] != address(0);
     }
 
-    
     /**
      * @dev Set `delegator` as the delegator of `tokenId`.
      *
