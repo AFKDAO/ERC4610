@@ -59,7 +59,7 @@ Application running on the blockchain, such as blockchain game, can be defined a
 
 
 
-![state](/Users/tianzi/Desktop/state.png)
+![state](https://github.com/AFKDAO/ERC4610/blob/main/docs/state.png)
 
 
 
@@ -73,7 +73,7 @@ ERC-4610 aims to provide standardized token rental and loanable protocol for eco
 
 Note that  `delegator` is only an operator of `owner` , therefore, the transaction sent by `delegator` should eventually change the state of `owner`, not `delegator`. When it comes to the transfer of assets, the `sender` should be the `owner` (not `delegator`) or other (depending on your app logic), and when the assets are to be transferred out, the `recipient` should be the `owner` or other. 
 
-![how_it_works](/Users/tianzi/Desktop/how_it_works.png)
+![how_it_works](https://github.com/AFKDAO/ERC4610/blob/main/docs/how_it_works.png)
 
 The figure above shows how game or applications that are based on ERC-4610 will achieve the goal of NFTs lending and borrowing in a decentralized way. 
 
@@ -93,7 +93,7 @@ In the example, gold is the revenue token, and Digimon is the NFT token. There a
 
 User can claim gold rewards from the Game. 
 
-![claim](/Users/tianzi/Desktop/claim.png)
+![claim](https://github.com/AFKDAO/ERC4610/blob/main/docs/claim.png)
 
 
 
@@ -101,7 +101,7 @@ User can claim gold rewards from the Game.
 
 User can levelup his NFT level, and it will consume some gold tokens.
 
-![levelup](/Users/tianzi/Desktop/levelup.png)
+![levelup](https://github.com/AFKDAO/ERC4610/blob/main/docs/levelup.png)
 
 
 
@@ -109,19 +109,19 @@ User can levelup his NFT level, and it will consume some gold tokens.
 
 User breeds a Digimon, and will get a new Digimon NFT
 
-![breed](/Users/tianzi/Desktop/breed.png)
+![breed](https://github.com/AFKDAO/ERC4610/blob/main/docs/breed.png)
 
 ### 4. adventure
 
 User's Digimon goes on an adventure, the NFT will transfer to game contract from owner.
 
-![adventure](/Users/tianzi/Desktop/adventure.png)
+![adventure](https://github.com/AFKDAO/ERC4610/blob/main/docs/adventure.png)
 
 ### 5. home
 
 User withdraws his or her Digimon NFT.
 
-![home](/Users/tianzi/Desktop/home.png)
+![home](https://github.com/AFKDAO/ERC4610/blob/main/docs/home.png)
 
 
 
