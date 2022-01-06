@@ -1,11 +1,11 @@
 # Summary
 ERC-4610 is an extension of ERC-721 and it aims to provide standardized token rental and loanable protocol for ecological applications such as blockchain games. 
 
-
+<br/>
 
 # Specification
 
-
+<br/>
 
 ## Methods
 
@@ -45,7 +45,7 @@ Safely transfers `tokenId` token from `from` to `to` and `delegator` won't be cl
 function safeTransferFrom(address from, address to, uint256 tokenId, bool reserved) external;
 ```
 
-
+<br/>
 
 # Implementation
 
@@ -77,7 +77,7 @@ Note that  `delegator` is only an operator of `owner` , therefore, the transacti
 
 The figure above shows how game or applications that are based on ERC-4610 will achieve the goal of NFTs lending and borrowing in a decentralized way. 
 
-
+<br/>
 
 # Example
 
@@ -133,3 +133,5 @@ User withdraws his or her Digimon NFT.
 2. The delegator has the permission to send a valid transaction, but does not hold or handle any related assets. When it comes to the transfer of assets, the `sender` should be the `owner` (not delegator) or other (depending on your app logic), and when the assets are to be transferred out, the `recipient` should be the `owner` or other.
 3.  `delegator` should generally have no permission for functions that may cause the loss of `owner` assets, such as burning NFTs.
 4. In some cases, the loan contract may not support the transfer of NFTs to the game contract or application contract. Please pay attention to this.
+
+<br/>
