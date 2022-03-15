@@ -7,7 +7,7 @@ ERC-4610 is an extension of ERC-721 and it aims to provide standardized token re
 
 ### delegatorOf
 
-Returns the delegator of an ERC721.
+Returns the delegator of ERC721.
 
 Delegator is only an attribute of ERC721 for identification, and does not have any direct permissions like {approve}  {setApprovalForAll}  {transferFrom}  {safeTransferFrom}.
 
